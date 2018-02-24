@@ -1,0 +1,38 @@
+@import "../functions";
+main{
+	background: #fff;	
+	-moz-box-shadow: 0 0 10px #a2a2a2;
+	-webkit-box-shadow: 0 0 10px #a2a2a2;
+	box-shadow: 0 0 10px #a2a2a2;
+}
+
+#main-menu{
+	ul{
+		text-align: right;
+	}
+	li{
+		margin-left: 0.5rem;
+		display: inline-block;
+		a{
+			background: $primary-color;
+			color: $white;
+			padding: 3px 10px;
+			text-decoration: none;
+			border-radius: 20px;
+			box-shadow: 1px 1px 1px $aluminum;
+			font-size: 0.75rem;
+			text-transform: uppercase;
+		}
+		a.active{
+			background: $secondary-color;
+			// color: $white;
+		}
+		a:hover{
+			color: $header-font-color;
+			background: $white;
+		}	
+	}
+	.inline-list > li {
+			float: none;
+	}
+}
