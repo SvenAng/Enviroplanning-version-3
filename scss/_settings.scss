@@ -80,9 +80,9 @@ $include-html-global-classes: $include-html-classes;
 // $include-html-grid-classes: $include-html-classes;
 // $include-xl-html-grid-classes: false;
 
-// $row-width: rem-calc(1000);
-// $total-columns: 12;
-// $column-gutter: rem-calc(30);
+$row-width: rem-calc(1000);
+$total-columns: 12;
+$column-gutter: rem-calc(30);
 
 // c. Global
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -103,24 +103,25 @@ $white       : #FFFFFF;
 // $snow        : #F9F9F9;
 // $vapor       : #F6F6F6;
 // $white-smoke : #F5F5F5;
-// $silver      : #EFEFEF;
+$silver      : #EFEFEF;
 // $smoke       : #EEEEEE;
-// $gainsboro   : #DDDDDD;
+$gainsboro   : #DDDDDD;
 // $iron        : #CCCCCC;
 // $base        : #AAAAAA;
 $aluminum    : #999999;
-// $jumbo       : #888888;
+$jumbo       : #888888;
 // $monsoon     : #777777;
 // $steel       : #666666;
 // $charcoal    : #555555;
 // $tuatara     : #444444;
-// $oil         : #333333;
+ $oil         : #333333;
  $jet         : #222222;
 // $black       : #000000;
 
 // We use these as default colors throughout
  $primary-color: #498259;
  $secondary-color: #F2A707;
+ $tertiariary-color: #0f2713;
  $alert-color: #f04124;
  $success-color: #43AC6A;
  $warning-color: #f08a24;
@@ -208,11 +209,11 @@ $large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-w
  $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
- $h1-font-size: rem-calc(44);
- $h2-font-size: rem-calc(37);
- $h3-font-size: rem-calc(27);
- $h4-font-size: rem-calc(23);
- $h5-font-size: rem-calc(18);
+ $h1-font-size: rem-calc(40);
+ $h2-font-size: rem-calc(30);
+ $h3-font-size: rem-calc(22);
+ $h4-font-size: rem-calc(18);
+ $h5-font-size: rem-calc(14);
  $h6-font-size: 1rem;
 
 // We use these to control header size reduction on small screens

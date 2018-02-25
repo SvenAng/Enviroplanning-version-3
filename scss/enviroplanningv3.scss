@@ -45,14 +45,14 @@
 @import "../../zurb_foundation/scss/foundation/components/accordion";
 @import "../../zurb_foundation/scss/foundation/components/alert-boxes";
 @import "../../zurb_foundation/scss/foundation/components/block-grid";
-@import "../../zurb_foundation/scss/foundation/components/breadcrumbs";
-@import "../../zurb_foundation/scss/foundation/components/button-groups";
-@import "../../zurb_foundation/scss/foundation/components/buttons";
+@import "components/breadcrumbs";
+@import "components/button-groups";
+@import "components/buttons"; 
 @import "../../zurb_foundation/scss/foundation/components/clearing";
 @import "../../zurb_foundation/scss/foundation/components/dropdown";
 @import "../../zurb_foundation/scss/foundation/components/dropdown-buttons";
 @import "../../zurb_foundation/scss/foundation/components/flex-video";
-@import "../../zurb_foundation/scss/foundation/components/forms";
+@import "components/forms";
 @import "../../zurb_foundation/scss/foundation/components/icon-bar";
 @import "../../zurb_foundation/scss/foundation/components/inline-lists";
 @import "../../zurb_foundation/scss/foundation/components/joyride";
@@ -75,8 +75,8 @@
 @import "../../zurb_foundation/scss/foundation/components/thumbs";
 @import "../../zurb_foundation/scss/foundation/components/tooltips";
 @import "../../zurb_foundation/scss/foundation/components/top-bar";
-@import "../../zurb_foundation/scss/foundation/components/type";
-@import "../../zurb_foundation/scss/foundation/components/offcanvas";
+@import "components/type";
+@import "components/offcanvas";
 @import "../../zurb_foundation/scss/foundation/components/visibility";
 
 // Comment out this import if you don't want to use Bourbon, a replacement for Compass mixins.

@@ -36,3 +36,149 @@ main{
 			float: none;
 	}
 }
+.right-off-canvas-menu{
+	// background: $silver;
+	// padding: 0.5rem;
+	.menu-level-1{
+		padding: 1rem;
+	}
+	ul{
+		margin: 0;
+		li{
+			list-style-type: none;
+			border-bottom: 1px solid $aluminum;
+			ul{
+				// background: white;
+			}
+			li{
+				border: none;
+				padding-left: 1rem;
+				a{
+					font-size: 0.7rem;
+				}
+				span{
+					border: none;
+				}
+			}
+			span{
+				position: absolute;
+				right: 1rem;
+				width: 3rem;
+				// border-left: 1px solid $aluminum;
+				cursor: pointer;
+				padding: 0rem;
+				font-weight: 700;
+				text-align: center;
+				line-height: 3rem;
+				
+			}
+			.klickad{
+				background: $gainsboro;
+			}
+		}	
+	}
+	
+	a{
+		line-height: 3rem;
+	}
+
+	
+}
+.top-meny{
+	text-align: right;
+	section{
+		display: inline-block;
+	}
+	.block-locale-language{
+		ul{
+			margin:0;
+			padding:0;
+			li{
+				display: inline-block;
+				a{
+
+				}
+			}
+		}
+	}
+}
+.inner-wrap{
+	header{
+		padding: 3rem 0;
+	}
+}
+.l-main{
+	padding: $column-gutter/2;
+}
+// .breadcrumbs{
+// 	background: none;
+// 	border: none;
+// }
+
+// ======== TMP ============
+// Anpassningar så att det ser ut som det gamla temat
+// Vi designar om detta sedan när nya vyer byggs
+
+// -------- Startsidan --------------
+
+// Nyhetsvy (fruktansvärd taggning i vyn)
+$tmp-font-size-1: 12px;
+.sidebar-second{
+	border-left: 1px solid $jumbo;
+}
+.news-front{
+
+	font-size: $tmp-font-size-1;
+	.news-front-date{
+		color: $aluminum;
+		margin-bottom: $column-gutter/6;
+	}
+	.news-front-title{
+		font-size: $tmp-font-size-1*1.2;
+		margin-bottom: $column-gutter/6;
+		a{
+			color: $header-font-color;
+		}
+		h2{
+			margin: 0;
+		}
+
+	}
+	.news-front-body{
+		p{
+			font-size: $tmp-font-size-1;
+			margin-bottom: $column-gutter/6;
+		}
+
+	}
+	.news-front-readmore{
+		margin-bottom: $column-gutter;
+	}
+	div{
+		div{
+			margin-bottom: $column-gutter;
+			div{
+				margin: 0;
+			}
+		}
+			// marginalemn mellan nyheter\
+			// 
+		
+	}
+}
+
+.l-footer-columns{
+
+	background: $tertiariary-color;
+	h3{
+		color: $white;
+		font-size: $tmp-font-size-1*1.3;
+	}
+	a{
+		color: $white;
+		font-size: $tmp-font-size-1;
+	}
+}
+
+
+// ==========================

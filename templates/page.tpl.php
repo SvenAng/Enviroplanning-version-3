@@ -13,35 +13,37 @@
 
     <!-- Title, slogan and menu -->
     <?php if ($alt_header): ?>
-      <section class="row <?php print $alt_header_classes; ?>">
-
-      <?php if ($linked_logo): print $linked_logo; endif; ?>
-        <nav class="small-12 columns hide-for-large-up tab-bar">
-          <a class="right-off-canvas-toggle menu-icon" href="#" ><span></span></a>
-        </nav>
-        <?php if ($site_name): ?>
-          <?php if ($title): ?>
-            <div id="site-name" class="element-invisible">
-              <strong>
-                <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-              </strong>
+      <section class="<?php print $alt_header_classes; ?>">
+        <div class="row hide-for-large-up">
+          
+          <div class="columns small-10 ">
+            <?php if ($linked_logo): print $linked_logo; endif; ?>
+          </div>
+          
+          <nav class="small-2 columns tab-bar">
+            <a class="right-off-canvas-toggle menu-icon" href="#" ><span></span></a>
+          </nav>
+        </div>
+         
+         <div class="row show-for-large-up">
+            <div class="columns medium-2 ">
+              <?php if ($linked_logo): print $linked_logo; endif; ?>
             </div>
-          <?php else: /* Use h1 when the content title is empty */ ?>
-            <h1 id="site-name">
-              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home"><span><?php print $site_name; ?></span></a>
-            </h1>
+            <div class="columns medium-10 ">
+            <?php if (!empty($page['top_meny'])): ?>
+              <div class="top-meny">
+                <?php print render($page['top_meny']); ?>
+            </div> 
           <?php endif; ?>
-        <?php endif; ?>
-
-        <?php if ($site_slogan): ?>
-          <h2 title="<?php print $site_slogan; ?>" class="site-slogan"><?php print $site_slogan; ?></h2>
-        <?php endif; ?>
-
-        <?php if ($alt_main_menu): ?>
-          <nav id="main-menu" class="navigation show-for-large-up" role="navigation">
-            <?php print ($alt_main_menu); ?>
-          </nav> <!-- /#main-menu -->
-        <?php endif; ?>
+            
+            <?php if ($alt_main_menu): ?>
+              <nav id="main-menu" class="navigation" role="navigation">
+                <?php print ($alt_main_menu); ?>
+            </nav> 
+          <?php endif; ?>
+          </div>
+         </div>
+        
 
         <?php if ($alt_secondary_menu): ?>
           <nav id="secondary-menu" class="navigation" role="navigation">
