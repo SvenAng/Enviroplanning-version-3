@@ -64,14 +64,13 @@
       </section>
       <!--/.l-header-region -->
     <?php endif; ?>
-
   </header>
   <!--/.l-header -->
 
   <?php if (!empty($page['featured'])): ?>
     <!--.l-featured -->
-    <section class="l-featured row">
-      <div class="columns">
+    <section class="l-featured row medium-collapse">
+      <div class="columns medium-12 ">
         <?php print render($page['featured']); ?>
       </div>
     </section>
@@ -191,7 +190,7 @@
   <?php endif; ?>
 
   <!--.l-footer -->
-  <footer class="l-footer panel row" role="contentinfo">
+  <footer class="l-footer row" role="contentinfo">
     <?php if (!empty($page['footer'])): ?>
       <div class="footer columns">
         <?php print render($page['footer']); ?>
