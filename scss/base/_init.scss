@@ -1,13 +1,42 @@
 @import "../functions";
 
+//$link-function-factor: -20%;
+//$menu-bg-hover: scale-color($secondary-color, $lightness: $link-function-factor);
+$hover-speed: 0.3s;
+
+:hover{
+  -webkit-transition: background-color $hover-speed ease-out;
+  -moz-transition: background-color $hover-speed ease-out;
+  -o-transition: background-color $hover-speed ease-out;
+  transition: background-color $hover-speed ease-out;
+  -webkit-transition: color $hover-speed ease-out;
+  -moz-transition: color $hover-speed ease-out;
+  -o-transition: color $hover-speed ease-out;
+  transition: color $hover-speed ease-out;
+  // color: $secondary-color !important;
+}	
 h2 a{
 	color: $header-font-color;
 	font-size: $h2-font-size;
 }
 a:hover{
-	// color: $secondary-color;
+	 // color: $secondary-color !important;
 }
-
+h5.block-title, .view-adminpersonal h6{
+	color: $primary-color;
+	font-size: 0.9rem;
+	font-weight: 300;
+	text-transform: uppercase !important;
+	border-bottom: dotted 1px $primary-color;
+}
+.front{
+	h5.block-title{
+		margin-bottom: 1rem;
+	}
+	.more-link-wrapper{
+		margin-top: 1rem;
+	}
+}
 main{
 	background: #fff;	
 	-moz-box-shadow: 0 0 10px #a2a2a2;
@@ -15,7 +44,35 @@ main{
 	box-shadow: 0 0 10px #a2a2a2;
 }
 // söknappen
-
+//Sökrutan\
+.block-custom-search-blocks{
+  div{
+    .form-item{
+      float: left;
+      margin: 0;
+      input[type="text"]{
+        height: 1.6rem;
+        line-height: 1rem;
+        margin: 0;
+        padding: 0.5rem;
+      }
+    }
+    button{
+      float: left;
+      margin: 0;
+      padding: 0.3rem 0.6rem;
+      height: 1.6rem;
+      font-size: 0.7rem;
+    }
+    button.radius{
+      border-radius: 0 1rem 1rem 0;
+    }
+    button.secondary{
+      background: $primary-color;
+    }
+  }
+}
+// gamla blocket
 	.block-search-form{
 		vertical-align: center;
 		.postfix.button{
@@ -58,41 +115,44 @@ main{
 			text-transform: uppercase;
 			font-weight: 400;
 		}
-		a.active-trail{
+		a.active-trail, a.active{
 			background: $secondary-color;
-			// color: $white;
 		}
 		a:hover{
-			color: $header-font-color;
-			background: $white;
+			background: $secondary-color;
+//      background: $success-button-bg-hover;
+//      background: $menu-bg-hover;
+//      -webkit-transition: background-color 0.3s ease-out;
+//      -moz-transition: background-color 0.3s ease-out;
+//      -o-transition: background-color 0.3s ease-out;
+//      transition: background-color 0.3s ease-out;
 		}	
 	}
 	.inline-list > li {
 			float: none;
 	}
 }
+.logo{
+	// text-align: center;
+	padding-left: $column-gutter/2;
+}
 .right-off-canvas-menu{
-	// background: $silver;
-	// padding: 0.5rem;
+	
 	.menu-level-1{
 		padding: 1rem;
 	}
 	ul{
 		margin: 0;
+		padding: 0 $column-gutter/2;
 		li{
 			list-style-type: none;
-			border-bottom: 1px solid $aluminum;
+			border-bottom: 1px dashed $aluminum;
 			
 			a{
 				font-size: 0.9rem;
-				// line-height: 1rem;
-				// padding-top: 0.7rem;
-				// padding-bottom: 0.7rem;
-				// display: block;
+				
 			}
-			ul{
-				// background: white;
-			}
+			
 			li{
 				border: none;
 				padding-left: 1rem;
@@ -160,7 +220,9 @@ main{
 		}
 	}
 }
-// Featured För galleri ==========================
+
+
+// Featured För galleri ========================== kolla om kan tas bort efter installation av flexslider
 .l-featured{
 	.block-fieldblock-node-page-full-field-galleri-bild,
 	.field-name-field-bild-galleri-tjanst,
@@ -186,28 +248,34 @@ aside.sidebar-first{
 		// margin-left: 0;
 		// margin-bottom: 0.5rem;
 		margin: 0;
-		.active{
+		.active, :hover{
 			color: $secondary-color;
+      
+		}
+		ul{
+			padding-top: 0.4rem;
 		}
 		li.expanded,
 		li.leaf{
 			// margin-top: 0.5rem; 
 			// margin-bottom: 0.5rem;
-			padding: 0.5rem 0;
+			// padding: 0.5rem 0;
 		}
 		li{
 			list-style-type: none;
-			border-top: 1px dotted $secondary-color;
+			// border-top: 1px dotted $secondary-color;
 			// margin-top: 5px;
 			margin-left: 0;
+			padding: 0.3rem 0;
 			
 			li{
 				border-top: none;
-				margin-left: 1rem;	
+				margin-left: 0.9rem;	
+				padding: 0.2rem 0;
 			}
 			li.expanded,
 			li.leaf{
-				padding: 0
+				// padding: 0
 			}
 			
 		}	
@@ -235,7 +303,7 @@ aside.sidebar-first{
 	}
 }
 .l-main{
-	padding: $column-gutter/2;
+	padding: $column-gutter/1.1 $column-gutter/2 $column-gutter/2 $column-gutter/2;
 }
 // .breadcrumbs{
 // 	background: none;
@@ -257,7 +325,7 @@ aside.sidebar-first{
 	}
 }
 
-// Generellt vyer
+// ================================ Generellt vyer================================= 
 // paginering
 .view-content{
 	display: block;
@@ -266,7 +334,7 @@ aside.sidebar-first{
 	margin-top: $column-gutter;
 	display: block;
 }
-.field-type-entityreference{
+.field-type-entityreference, .contact{
 	a{
 		display: block; 
 		padding: 0.3rem 0;
@@ -288,8 +356,148 @@ aside.sidebar-first{
 		font-size: 0.9rem;
 		font-weight: 400;
 	}
-	margin-bottom: 2rem;
+	// margin-bottom: 2rem;
 }
+// Exponerade widgets
+.views-exposed-widget{
+	margin-bottom: $column-gutter/2;	;
+	.form-item{
+		float: left;
+		input[type="radio"]{
+			margin:0;
+			vertical-align: middle;
+		}
+		label{
+			// color: $secondary-color;
+			// line-height: 3px;
+			vertical-align: top;
+			font-weight: 400;
+		}
+	}
+}
+// specialvyer
+.view-date{
+	font-size: 0.8rem;
+	color: $oil;
+}
+// ============================================================== //
+.view-adminpersonal{
+	img{
+		width: 100%;
+	}
+	.views-row{
+		width: 100%;
+	}
+}
+.more-link-wrapper{
+	// width: 100%;
+	display: block;
+	.more-link{
+		// 
+		margin-left: auto;
+		margin-right: auto;
+		width: 130px;
+		// height: 50px;
+text-align: center !important;	
+		a{
+			// background-color: black;
+
+		}
+	}
+	.button{
+		display: block !important;
+	}
+}
+.view-aktuellt, .view-publikationer{
+	a{
+		// color: $body-font-color;
+    color: $body-font-color;
+	}
+
+	@media #{$small-only} { 
+		.bild{
+			margin-bottom: $column-gutter/2;
+		}
+	}
+	.custom-view-row{
+		margin: 0;
+		padding: $column-gutter 0;
+		border-bottom: 1px dotted $base; 
+	}
+}
+//Flexslider on front ===================
+.frontpage-gallery{
+  .gallery-bottom{
+    position: relative;
+    .gallery-top{
+    	h1{
+    		color: $white;
+    	}
+      position: absolute;
+      bottom: 1rem;
+      color: $white;
+      // left: 50%;
+      // -webkit-transform: translateX(-50%);
+      // transform: translateX(-50%);
+      left: 4.5rem;
+      z-index: 10;
+      // padding: 2rem;
+      // background: rgba(255, 255, 255, 0.28);
+    }
+  }
+  .flexslider{
+    background: none;
+    border: none;
+    margin-bottom: 0;
+  }
+}
+// Personal personal-grid
+
+.view-adminpersonal{
+	.columns{
+		a{
+			color: $body-font-color;
+		}
+		padding-bottom: $column-gutter/2;
+		h3{
+			font-size: 1rem;
+			margin-bottom: 0;
+		
+		}
+		}
+	h6{
+		margin-left: $column-gutter/2;
+		// font-style: italic;
+		// color: $jumbo;
+		margin-bottom: 1.2rem;
+	}
+}
+// DS
+.ds-1col{
+	.image{
+		padding-bottom: $column-gutter/2;
+		img{
+			// max-height: 400px;
+			// width: auto;
+		}
+	}
+}
+.sidebar-second{
+	input[type="file"], input[type="checkbox"], input[type="radio"], select, input[type="text"] {
+		margin: 0 ;
+		// width: 210px;
+	}
+	.views-exposed-form .views-exposed-widget .form-submit {
+		margin-top: $column-gutter/2;
+		margin-bottom: $column-gutter/2;
+	}
+	.views-exposed-form .views-exposed-widget {
+	// float: none;
+	// clear: both;
+	}	
+}
+
+//=======================================
 // ======== TMP =======================================================================
 // Anpassningar så att det ser ut som det gamla temat
 // Vi designar om detta sedan när nya vyer byggs
@@ -299,7 +507,17 @@ aside.sidebar-first{
 // Nyhetsvy (fruktansvärd taggning i vyn)
 $tmp-font-size-1: 12px;
 .sidebar-second{
-	border-left: 1px solid $jumbo;
+	
+	@media #{$medium-up} { 
+		border-left: 1px solid $jumbo;
+	}
+}
+@media #{$small-only} { 
+	main{
+		.sidebar-second{
+			margin-top: $column-gutter;
+		}
+	}
 }
 .news-front{
 
@@ -396,7 +614,7 @@ $tmp-font-size-1: 12px;
 
 .l-footer-columns{
 
-	background: $tertiariary-color;
+	background: #fff;
 	// padding: $column-gutter/2 0;
 	h3{
 		color: $white;
@@ -447,23 +665,23 @@ $tmp-font-size-1: 12px;
 		font-weight: 700;
 	}
 	@media #{$medium-up} { 
-		.views-row{
-			width: 25%;
-			float: left;
-		}
+		// .views-row{
+		// 	width: 25%;
+		// 	float: left;
+		// }
 	}
 	@media #{$medium-only} { 
-		.views-row{
-			padding-right: $column-gutter/2;
-			// width: 50%;
-			// float: left;
-		}
+		// .views-row{
+		// 	padding-right: $column-gutter/2;
+		// 	// width: 50%;
+		// 	// float: left;
+		// }
 	}
 	@media #{$small-only} { 
-		.views-row{
-			width: 100%;
-			float: none;
-		}
+		// .views-row{
+		// 	width: 100%;
+		// 	float: none;
+		// }
 	}
 	
 

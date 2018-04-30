@@ -16,7 +16,7 @@
       <section class="<?php print $alt_header_classes; ?>">
         <div class="row hide-for-large-up">
           
-          <div class="columns small-10 ">
+          <div class="columns small-10 logo">
             <?php if ($linked_logo): print $linked_logo; endif; ?>
           </div>
           
@@ -99,6 +99,7 @@
 
   <!--.l-main -->
   <main role="main" class="row l-main">
+
     <!-- .l-main region -->
     <div class="<?php print $main_grid; ?> main columns">
       <?php if (!empty($page['highlighted'])): ?>
@@ -109,7 +110,7 @@
 
       <a id="main-content"></a>
 
-      <?php if ($breadcrumb): print $breadcrumb; endif; ?>
+      <div class="hide-for-small-only"><?php //if ($breadcrumb): print $breadcrumb; endif; ?></div>
 
       <?php if ($title): ?>
         <?php print render($title_prefix); ?>
