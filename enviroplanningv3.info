@@ -59,15 +59,17 @@ scripts[] = js/app.min.js
 ; file:
 ;   regions[header] = Header
 ; You'll use this variable in page.tpl.php:
-;   <?php print render($page['header']); ?>
+;   <?php print render($page['content_above']); ?>
 
 regions[offcanvas_meny]		= OffCanvas meny
 regions[lang]		= OffCanvas language switcher
+regions[top_search]		= Sök
 regions[top_meny]		= Top meny
 regions[header]              = Header
 regions[help]                = Help
 regions[highlighted]         = Highlighted
 regions[featured]            = Featured
+regions[content_above]             = Above Content
 regions[content]             = Content
 regions[sidebar_first]       = Left Sidebar
 regions[sidebar_second]      = Right Sidebar

@@ -1,20 +1,8 @@
 /* Implement custom javascript here */
 window.onload = function() {
-  
-  
-  
+
   (function ($) {
-    //alert("hej js");
-//    var $tip = $('.avatar-title');
-//    $tip.hide();
-//
-//    $(".avatar-item").hover(
-//      function(){
-//        $(this).find(".avatar-title").fadeIn(500); 
-//      }, function(){
-//        $(this).find(".avatar-title").fadeOut(500);
-//      }
-//    );
+    jQuery('.search-block').hide();
   
 
      $('.off-canvas-submenu').hide();
@@ -29,6 +17,27 @@ window.onload = function() {
        $thx.text($thx.text() == '+' ? '-' : '+');
        $(this).toggleClass('klickad');
      });
+    
+    // sökblocket
+    
+    jQuery(".search-ikon").click(function(){
+      jQuery('.search-block').slideToggle();
+    });
+    // timer
+    var interval = 1;
+
+    setInterval(function(){
+      if(interval == 25){
+        jQuery('.search-block').slideUp();
+        interval = 1;
+      }
+      interval = interval+1;
+//      console.log(interval);
+    },1000);
+
+    jQuery(document).bind('mousemove keypress', function() {
+      interval = 1;
+    });
    }
    (jQuery));
 }

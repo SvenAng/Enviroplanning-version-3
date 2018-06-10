@@ -37,38 +37,54 @@ h5.block-title, .view-adminpersonal h6{
 		margin-top: 1rem;
 	}
 }
+.inner-page{
+//  border: solid #000 2px;
+//  overflow: hidden;
+  -moz-box-shadow: 0 0 10px #a2a2a2;
+  -webkit-box-shadow: 0 0 10px #a2a2a2;
+  box-shadow: 0 0 10px #a2a2a2;
+}
 main{
 	background: #fff;	
-	-moz-box-shadow: 0 0 10px #a2a2a2;
-	-webkit-box-shadow: 0 0 10px #a2a2a2;
-	box-shadow: 0 0 10px #a2a2a2;
+	
 }
 // söknappen
 //Sökrutan\
-.block-custom-search-blocks{
-  div{
-    .form-item{
-      float: left;
-      margin: 0;
-      input[type="text"]{
-        height: 1.6rem;
-        line-height: 1rem;
+.search-block{ 
+  button.secondary, .button.secondary {
+    background-color: $primary-color;
+//    border-color: #c28606;
+    color: #f8f8f8;
+  }
+  display: none;
+  .row{
+    border-bottom: 2px dashed $gainsboro;
+    padding: 2rem 2rem 2rem 0;
+    .block-custom-search-blocks{
+      button.radius, .button.radius {
+        border-radius: 0;
         margin: 0;
-        padding: 0.5rem;
       }
-    }
-    button{
-      float: left;
-      margin: 0;
-      padding: 0.3rem 0.6rem;
-      height: 1.6rem;
-      font-size: 0.7rem;
-    }
-    button.radius{
-      border-radius: 0 1rem 1rem 0;
-    }
-    button.secondary{
-      background: $primary-color;
+      .search-form {
+        margin: 0;
+      }
+      button, .button{
+        float: left;
+        padding: 0.3rem 0.6rem;
+        font-size: 0.85rem;
+        line-height: 1.7rem;
+        width: 60px;
+      }
+      .form-item{
+        float: left;
+        margin: 0 1rem 0 0;;
+        input[type="text"]{
+          margin: 0;
+        }
+        button.secondary{
+          background: $primary-color;
+        }
+      }
     }
   }
 }
@@ -134,7 +150,9 @@ main{
 }
 .logo{
 	// text-align: center;
-	padding-left: $column-gutter/2;
+//	padding-right: $column-gutter/4;
+//  padding-bottom: 12px;
+  width: 300px;
 }
 .right-off-canvas-menu{
 	
@@ -184,7 +202,9 @@ main{
 	a{
 		line-height: 3rem;
 	}
-
+  .block-custom-search-blocks{
+    padding: $column-gutter/2;
+  }
 	
 }
 .top-meny{
@@ -303,7 +323,8 @@ aside.sidebar-first{
 	}
 }
 .l-main{
-	padding: $column-gutter/1.1 $column-gutter/2 $column-gutter/2 $column-gutter/2;
+//	padding: $column-gutter/1.1 $column-gutter/2 $column-gutter/2 $column-gutter/2;
+  padding: $column-gutter/4;
 }
 // .breadcrumbs{
 // 	background: none;
@@ -315,13 +336,15 @@ aside.sidebar-first{
 	p{
 		color: $white;
 		opacity: inherit;
+    font-size: 12px;
 	}
-	margin-bottom: 2rem !important;
+//	margin-bottom: 2rem !important;
 	padding: $column-gutter/2;
+  
 	.copyright{
 		text-align: center;
 		color: $white;
-		font-size: 11px;
+		font-size: 10px;
 	}
 }
 
@@ -466,7 +489,7 @@ text-align: center !important;
 		}
 		}
 	h6{
-		margin-left: $column-gutter/2;
+//		margin-left: $column-gutter/2;
 		// font-style: italic;
 		// color: $jumbo;
 		margin-bottom: 1.2rem;
@@ -686,6 +709,10 @@ $tmp-font-size-1: 12px;
 	
 
 }
+
+.content-above{
+	margin-bottom: $column-gutter;
+}
 // Tjänstesidan MYCKET TILLFÄLLIGT INSTALLEA DS ISTÄLLET
 .field-name-field-entity-kontaktperson{
 		a{
@@ -699,3 +726,47 @@ a{
 }
 
 // ==========================
+//Ikooner i header
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon/icomoon.eot?pdxtp');
+  src:  url('../fonts/icomoon/icomoon.eot?pdxtp#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon/icomoon.ttf?pdxtp') format('truetype'),
+    url('../fonts/icomoon/icomoon.woff?pdxtp') format('woff'),
+    url('../fonts/icomoon/icomoon.svg?pdxtp#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.epikon {
+  /* use !imp ortant to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 1rem;
+//  color: $aluminum; 
+  color: $primary-color;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.epikon:hover{
+  color: $black;
+}
+.icon-facebook:before {
+  content: "\ea90";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-linkedin2:before {
+  content: "\eaca";
+}
+.icon-magnifying-glass:before {
+  content: "\e900";
+}

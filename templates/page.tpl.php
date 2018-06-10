@@ -9,6 +9,13 @@
 <div role="document" class="page">
 
   <!--.l-header -->
+  <aside role="complementary" class="search-block">
+    <div class="row">
+    <div class="columns small-centered small-12 large-offset-9">
+    <?php print render($page['top_search']); ?>
+    </div>
+  </div>
+  </aside>
   <header role="banner" class="l-header">
 
     <!-- Title, slogan and menu -->
@@ -25,11 +32,11 @@
           </nav>
         </div>
          
-         <div class="row show-for-large-up">
-            <div class="columns medium-2 ">
+         <div class="row show-for-large-up ">
+            <div class="columns medium-4 ">
               <?php if ($linked_logo): print $linked_logo; endif; ?>
             </div>
-            <div class="columns medium-10 ">
+            <div class="columns medium-8 ">
             <?php if (!empty($page['top_meny'])): ?>
               <div class="top-meny">
                 <?php print render($page['top_meny']); ?>
@@ -66,7 +73,7 @@
     <?php endif; ?>
   </header>
   <!--/.l-header -->
-
+  <div class="inner-page row large-collapse">
   <?php if (!empty($page['featured'])): ?>
     <!--.l-featured -->
     <section class="l-featured row medium-collapse">
@@ -99,7 +106,11 @@
 
   <!--.l-main -->
   <main role="main" class="row l-main">
-
+  	<?php if (!empty($page['content_above'])): ?>
+	  	<div class="small-12 columns content-above">
+	  		<?php print render($page['content_above']); ?>
+	  	</div>
+  	<?php endif; ?>
     <!-- .l-main region -->
     <div class="<?php print $main_grid; ?> main columns">
       <?php if (!empty($page['highlighted'])): ?>
@@ -111,6 +122,13 @@
       <a id="main-content"></a>
 
       <div class="hide-for-small-only"><?php //if ($breadcrumb): print $breadcrumb; endif; ?></div>
+
+
+		
+
+
+		  
+		
 
       <?php if ($title): ?>
         <?php print render($title_prefix); ?>
@@ -200,12 +218,13 @@
 
     <?php if ($site_name) : ?>
       <div class="copyright columns">
-        &copy; <?php print date('Y') . ' ' . $site_name . ' ' . t('All rights reserved.'); ?>
+        &copy; <?php print date('Y') . ' ' . $site_name; ?>
       </div>
     <?php endif; ?>
   </footer>
   <!--/.l-footer -->
 
   <?php if ($messages && $zurb_foundation_messages_modal): print $messages; endif; ?>
+</div>
 </div>
 <!--/.page -->
