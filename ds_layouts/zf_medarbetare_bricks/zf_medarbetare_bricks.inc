@@ -8,9 +8,11 @@ function ds_zf_medarbetare_bricks() {
   return array(
     'label' => t('Enviroplanning Medarbetare'),
     'regions' => array(
-      'above_left' => t('Above Left'),
-      'above_right' => t('Above Right'),
-      'middle' => t('Middle'),
+    'main_right_bild' => t('Högerpalt Bild'),
+    'main_right_titel' => t('Högerpalt Titel'),
+    'main_right_fakta' => t('Personalfakta i Högerspalt'),
+      'main_right' => t('Högerpalt'),
+      'main_left' => t('Vänsterspalt'),
     ),
     'image' => TRUE,
   );

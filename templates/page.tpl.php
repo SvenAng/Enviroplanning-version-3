@@ -73,10 +73,11 @@
     <?php endif; ?>
   </header>
   <!--/.l-header -->
-  <div class="inner-page row large-collapse">
+  <div class="inner-page row small-collapse">
+  	<!-- row large-collapse -->
   <?php if (!empty($page['featured'])): ?>
     <!--.l-featured -->
-    <section class="l-featured row medium-collapse">
+    <section class="l-featured row small-collapse">
       <div class="columns medium-12 ">
         <?php print render($page['featured']); ?>
       </div>
@@ -119,16 +120,10 @@
         </div>
       <?php endif; ?>
 
-      <a id="main-content"></a>
+      <!-- <a id="main-content"></a> -->
 
       <div class="hide-for-small-only"><?php //if ($breadcrumb): print $breadcrumb; endif; ?></div>
 
-
-		
-
-
-		  
-		
 
       <?php if ($title): ?>
         <?php print render($title_prefix); ?>

@@ -9,28 +9,34 @@
   <?php if (isset($title_suffix['contextual_links'])): ?>
     <?php print render($title_suffix['contextual_links']); ?>
   <?php endif; ?>
+  <div class="row">
 
-
-  <?php if (!empty($above_left) || !empty($above_right)): ?>
-    <div class="<?php print $zf_wrapper_classes; ?>">
-      <<?php print $above_left_wrapper ?> class="columns small-12 medium-6 group-above-left<?php print $above_left_classes; ?>">
-      <?php print $above_left; ?>
-      </<?php print $above_left_wrapper ?>>
-
-      <<?php print $above_right_wrapper ?> class="columns small-12 medium-6 group-above-right<?php print $above_right_classes; ?>">
-      <?php print $above_right; ?>
-      </<?php print $above_right_wrapper ?>>
+  <?php if (!empty($main_right)): ?>
+    <div class="columns large-8 small-12">
+      <div class="stycke">
+        <?php print $main_right_bild; ?>
+      </div>
+      <div class="stycke">
+        <?php print $main_right_titel; ?>
+      </div>
+      <div class="fakta stycke">
+        <?php print $main_right_fakta; ?>
+      </div>
+      <div class="stycke">
+      <?php print $main_right; ?>
+      </div>
     </div>
   <?php endif; ?>
 
-  <?php if (!empty($middle)): ?>
-    <div class="<?php print $zf_wrapper_classes; ?>">
-      <<?php print $middle_wrapper ?> class="columns small-12 medium-9 group-middle<?php print $middle_classes; ?>">
-      <?php print $middle; ?>
-      </<?php print $middle_wrapper ?>>
+  <?php if (!empty($main_left)): ?>
+    <div class="columns large-4 small-12">
+      
+      
+        <?php print $main_left; ?>
+      
     </div>
   <?php endif; ?>
-
+</div>
 
 </<?php print $layout_wrapper ?>>
 

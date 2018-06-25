@@ -22,16 +22,21 @@ h2 a{
 a:hover{
 	 // color: $secondary-color !important;
 }
-h5.block-title, .view-adminpersonal h6{
+h5.block-title, .view-adminpersonal h6, .label-above{
 	color: $primary-color;
 	font-size: 0.9rem;
 	font-weight: 300;
 	text-transform: uppercase !important;
 	border-bottom: dotted 1px $primary-color;
 }
+.label-above{
+  margin-bottom: $column-gutter/2;
+}
 .front{
 	h5.block-title{
 		margin-bottom: 1rem;
+    margin-left: $column-gutter/2;
+    margin-right: $column-gutter/2;
 	}
 	.more-link-wrapper{
 		margin-top: 1rem;
@@ -44,16 +49,37 @@ h5.block-title, .view-adminpersonal h6{
   -webkit-box-shadow: 0 0 10px #a2a2a2;
   box-shadow: 0 0 10px #a2a2a2;
 }
+.l-main{
+//    -moz-box-shadow: 0 0 10px #a2a2a2;
+//    -webkit-box-shadow: 0 0 10px #a2a2a2;
+//    box-shadow: 0 0 10px #a2a2a2;
+}
+.l-footer, .l-footer-columns{
+//    -moz-box-shadow: 0 0 10px #a2a2a2;
+//    -webkit-box-shadow: 0 0 10px #a2a2a2;
+//    box-shadow: 0 0 10px #a2a2a2;
+}
 main{
 	background: #fff;	
-	
+	padding-left: $column-gutter;
 }
+//Kompensation för row-columns paddingen
+.ds-1col{
+  padding: 0 $column-gutter/2;
+//  padding-right: $column-gutter/2;
+}
+.personal-grid h6, .views-page h1{
+    margin: 0 $column-gutter/2;
+}
+
+
+
+// ----------
 // söknappen
 //Sökrutan\
 .search-block{ 
   button.secondary, .button.secondary {
     background-color: $primary-color;
-//    border-color: #c28606;
     color: #f8f8f8;
   }
   display: none;
@@ -120,6 +146,8 @@ main{
 	li{
 		margin-left: 0.5rem;
 		display: inline-block;
+    font-family: $font-family-top-menu !important;
+    line-height: 1.2rem;
 		a{
 			background: $primary-color;
 			color: $white;
@@ -130,6 +158,7 @@ main{
 			font-size: 0.75rem;
 			text-transform: uppercase;
 			font-weight: 400;
+      
 		}
 		a.active-trail, a.active{
 			background: $secondary-color;
@@ -212,26 +241,28 @@ main{
 	text-align: right;
 	section{
 		display: inline-block;
-		padding: 0 0.5rem;
+		padding: 0 0.5rem 0 0;
 	}
+  section:first-child{
+    padding: 0 0.7rem 0 0;
+  }
 	section:last-child{
-		padding-right: 0;
+    a{
+      padding: 0 0 0 0.4rem;
+    }
+    
 	}
 	.block-locale-language{
 		ul{
 			margin:0;
-			// padding-bottom: 13px;
 			display: block;
-			// vertical-align: top;
 			padding:0;
 			li{
-
+        font-size: 0.85rem;
 				display: inline-block;
 				a{
-					font-size: 0.75rem;
-					// padding: 0.4rem;
+          padding: 0 0.3rem;
 				}
-
 			}
 			li:first-child a{
 				border-right: solid 1px $primary-color;
@@ -319,17 +350,21 @@ aside.sidebar-first{
 // ==============================================
 .inner-wrap{
 	header{
-		padding: 1rem 0;
+    padding: 1rem 0 $column-gutter 0;
 	}
 }
 .l-main{
 //	padding: $column-gutter/1.1 $column-gutter/2 $column-gutter/2 $column-gutter/2;
-  padding: $column-gutter/4;
+  padding: $column-gutter 0;
+  section{
+//    padding: 0 $column-gutter/2;
+  }
 }
 // .breadcrumbs{
 // 	background: none;
 // 	border: none;
 // }
+
 .l-footer{
 	background: $tertiariary-color;
 	opacity: 0.75;
@@ -348,6 +383,77 @@ aside.sidebar-first{
 	}
 }
 
+// Medarbeteare
+
+.node-medarbetare{
+  .stycke{
+    margin-bottom: $column-gutter/2;
+  }
+  .fakta{
+    border-left: dotted $secondary-color 3px;
+    padding-left: 1rem;
+    color: $oil;
+//    margin-left: 0.5rem;
+    font-size: 0.85rem;
+//    line-height: 1.2rem;
+      div{
+        margin-bottom: 0.4rem;
+      }
+  }
+}
+//
+.label-above{
+  
+}
+// ====================== entity reference fields
+ul.ep-lista{
+  margin: 0 0 1em 0;
+  padding: 0 0 0 1em; /* make space for li's :before */
+} 
+ul.views-summary{
+  margin: 0;
+  padding: 0;
+}
+ul.ep-lista, ul.views-summary{
+  
+  list-style: none;
+  li{
+    position: relative;
+    padding-left: 0.4em;
+    margin-bottom: 0.4rem;
+    line-height: 1.4rem;
+    a{
+//      color:$black;
+      font-size: 0.85rem;
+     
+    }
+    a.active{
+      color: $secondary-color;
+    }
+    a:hover{
+      color: $secondary-color; 
+    }
+   
+  }
+  li:before{
+    font-family: "foundation-icons";
+    content: "\f121";
+    position: absolute;
+    left: -1em; /* same as ul padding-left */
+    top: 0.1rem; /* depends on character, maybe use padding-top instead */
+    /*  .... more styling, maybe set width etc ... */
+    font-size: 0.8rem;
+    color: $secondary-color;
+  }
+}
+.sidebar-second{
+  li{
+    line-height: 1.4rem;
+    a{
+      font-size: 0.85rem;
+    }
+  }
+}
 // ================================ Generellt vyer================================= 
 // paginering
 .view-content{
@@ -365,7 +471,7 @@ aside.sidebar-first{
 	}
 	a:before{
     	font-family: "foundation-icons";
-    	content: "\f126";
+    	content: "\f121";
     	// font-family: "Font Awesome";
     		// content: "\f095";
 
@@ -413,35 +519,35 @@ aside.sidebar-first{
 	}
 }
 .more-link-wrapper{
-	// width: 100%;
 	display: block;
 	.more-link{
-		// 
 		margin-left: auto;
 		margin-right: auto;
 		width: 130px;
-		// height: 50px;
-text-align: center !important;	
-		a{
-			// background-color: black;
-
-		}
+    text-align: center !important;
+    a{
+      color: white;
+    }
+    
 	}
 	.button{
 		display: block !important;
 	}
 }
-.view-aktuellt, .view-publikationer{
+.view-aktuellt, .view-publikationer, .view-archive{
 	a{
-		// color: $body-font-color;
-    color: $body-font-color;
+    color: $black;
 	}
-
+  
+  img{
+    margin-bottom: $column-gutter/4;
+  }
 	@media #{$small-only} { 
 		.bild{
 			margin-bottom: $column-gutter/2;
 		}
 	}
+ 
 	.custom-view-row{
 		margin: 0;
 		padding: $column-gutter 0;
@@ -459,13 +565,8 @@ text-align: center !important;
       position: absolute;
       bottom: 1rem;
       color: $white;
-      // left: 50%;
-      // -webkit-transform: translateX(-50%);
-      // transform: translateX(-50%);
       left: 4.5rem;
       z-index: 10;
-      // padding: 2rem;
-      // background: rgba(255, 255, 255, 0.28);
     }
   }
   .flexslider{
@@ -485,13 +586,13 @@ text-align: center !important;
 		h3{
 			font-size: 1rem;
 			margin-bottom: 0;
-		
-		}
-		}
+		  }
+    img{
+      margin-bottom: $column-gutter/4;
+      
+    }
+  }
 	h6{
-//		margin-left: $column-gutter/2;
-		// font-style: italic;
-		// color: $jumbo;
 		margin-bottom: 1.2rem;
 	}
 }
@@ -499,25 +600,16 @@ text-align: center !important;
 .ds-1col{
 	.image{
 		padding-bottom: $column-gutter/2;
-		img{
-			// max-height: 400px;
-			// width: auto;
-		}
 	}
 }
 .sidebar-second{
 	input[type="file"], input[type="checkbox"], input[type="radio"], select, input[type="text"] {
 		margin: 0 ;
-		// width: 210px;
 	}
 	.views-exposed-form .views-exposed-widget .form-submit {
 		margin-top: $column-gutter/2;
 		margin-bottom: $column-gutter/2;
 	}
-	.views-exposed-form .views-exposed-widget {
-	// float: none;
-	// clear: both;
-	}	
 }
 
 //=======================================
@@ -637,8 +729,12 @@ $tmp-font-size-1: 12px;
 
 .l-footer-columns{
 
-	background: #fff;
+  background: white;
 	// padding: $column-gutter/2 0;
+ 
+  border-top: 1px dotted #ddd ;
+//  margin-top: $column-gutter/3 !important;
+  
 	h3{
 		color: $white;
 		font-size: $tmp-font-size-1*1.3;
@@ -721,7 +817,7 @@ $tmp-font-size-1: 12px;
 	}
 
 a{
-	font-size: $tmp-font-size-1;
+//	font-size: $tmp-font-size-1;
 
 }
 
@@ -769,4 +865,48 @@ a{
 }
 .icon-magnifying-glass:before {
   content: "\e900";
+}
+
+//=================== Vyer ===========================
+
+.view{
+  .view-content{
+    .columns:first-child{
+//      padding-left: 0;
+    }
+    .columns:last-child{
+//      padding-right: 0;
+    }
+  }
+}
+
+.sidebar-first.columns{
+  padding-left: $column-gutter !important;
+}
+
+// ======= Spacialknappar =======
+#kontakt-knapp{
+  background: $primary-color;
+  color: white;
+  padding: 4px 18px;
+  border-radius: 3px;
+}
+#kontakt-knapp:hover{
+  background: $secondary-color;
+}
+#kontakt-knapp:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f0e0";
+  padding-right: 0.4rem;
+  color: white;
+}
+//Flex-slider
+.flex-direction-nav a{
+  overflow: inherit;
+}
+//hacks
+.node-type-webform{
+  .columns{
+    padding: 0 $column-gutter;
+  }
 }
