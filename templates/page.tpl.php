@@ -180,25 +180,21 @@
     <!--.footer-columns -->
     <section class="row l-footer-columns">
       <?php if (!empty($page['footer_firstcolumn'])): ?>
-        <div class="footer-first medium-3 columns">
+        <div class="footer-first medium-4 small-12 columns">
           <?php print render($page['footer_firstcolumn']); ?>
         </div>
       <?php endif; ?>
       <?php if (!empty($page['footer_secondcolumn'])): ?>
-        <div class="footer-second medium-3 columns">
+        <div class="footer-second medium-4 small-12 columns">
           <?php print render($page['footer_secondcolumn']); ?>
         </div>
       <?php endif; ?>
       <?php if (!empty($page['footer_thirdcolumn'])): ?>
-        <div class="footer-third medium-3 columns">
+        <div class="footer-third medium-4 small-12 columns">
           <?php print render($page['footer_thirdcolumn']); ?>
         </div>
       <?php endif; ?>
-      <?php if (!empty($page['footer_fourthcolumn'])): ?>
-        <div class="footer-fourth medium-3 columns">
-          <?php print render($page['footer_fourthcolumn']); ?>
-        </div>
-      <?php endif; ?>
+      
     </section>
     <!--/.footer-columns-->
   <?php endif; ?>
