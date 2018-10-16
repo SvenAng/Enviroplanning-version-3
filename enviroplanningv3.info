@@ -80,7 +80,8 @@ regions[footer_firstcolumn]  = Footer one
 regions[footer_secondcolumn] = Footer two
 regions[footer_thirdcolumn]  = Footer three
 regions[footer_fourthcolumn] = Footer four
-regions[footer]              = Footer
+regions[footer_first]        = Footer top
+regions[footer]              = Footer bottom
 
 ; Various page elements output by the theme can be toggled on and off. The
 ; "features" control which of these check boxes display on the

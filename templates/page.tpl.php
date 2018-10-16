@@ -180,12 +180,12 @@
     <!--.footer-columns -->
     <section class="row l-footer-columns">
       <?php if (!empty($page['footer_firstcolumn'])): ?>
-        <div class="footer-first medium-4 small-12 columns">
+        <div class="footer-first medium-6 medium-centered  small-12 columns">
           <?php print render($page['footer_firstcolumn']); ?>
         </div>
       <?php endif; ?>
       <?php if (!empty($page['footer_secondcolumn'])): ?>
-        <div class="footer-second medium-4 small-12 columns">
+        <div class="footer-second medium-4 medium-centeredsmall-12 columns">
           <?php print render($page['footer_secondcolumn']); ?>
         </div>
       <?php endif; ?>

@@ -53,6 +53,9 @@ h5.block-title, .view-adminpersonal h6, .label-above{
 //    -moz-box-shadow: 0 0 10px #a2a2a2;
 //    -webkit-box-shadow: 0 0 10px #a2a2a2;
 //    box-shadow: 0 0 10px #a2a2a2;
+  .block-views{
+    padding: $column-gutter/2;
+  }
 }
 .l-footer, .l-footer-columns{
 //    -moz-box-shadow: 0 0 10px #a2a2a2;
@@ -504,7 +507,112 @@ ul.ep-lista, ul.views-summary{
 		}
 	}
 }
-// specialvyer
+// ======== specialvyer
+
+
+// ====== Rapporter vy
+.rapporter{
+  h3{
+    margin-bottom: 0;
+  }
+  .image-wrapper{
+    padding: 15px;
+    box-shadow: 0px 0px 3px 3px $gainsboro;
+    max-width: 250px;
+  }
+  p.forfattare{
+    margin-bottom: 2px;
+    a{
+      font-size: 0.8rem;  
+    }
+  }
+  p.bestallare{
+    font-size: 0.8rem;
+    a{
+      font-size: 0.8rem;  
+    }
+  }
+}
+// =====
+
+
+// ============================== Rapport node =====================
+.rapport-node{
+  $subfontsize-1: 0.85rem;
+  .image{
+    padding: 15px;
+    box-shadow: 0px 0px 3px 3px $gainsboro;
+    max-width: 330px;
+  }
+  .field-name-field-pdf{
+    border-bottom: dotted $base 1px;
+    border-top: dotted $base 1px;
+    padding: 3px 5px 5px 5px;
+    line-height: 1rem;
+  }
+  .file{
+   
+    img{
+      display: inline-block;
+    }
+    a{
+      
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+
+      -ms-word-break: break-all;
+      /* This is the dangerous one in WebKit, as it breaks things wherever */
+      word-break: break-all;
+      /* Instead use this non-standard one: */
+      word-break: break-word;
+
+      /* Adds a hyphen where the word breaks, if supported (No Blink) */
+      -ms-hyphens: auto;
+      -moz-hyphens: auto;
+      -webkit-hyphens: auto;
+      hyphens: auto;
+      font-size: $subfontsize-1;
+    }
+  }
+  
+  .bottom{
+    margin-top: $column-gutter;
+  }
+  .date-display-single{
+    font-size: $subfontsize-1;
+  }
+//  .forfattare{
+//    font-size: $subfontsize-1;
+//  }
+  .label-inline{
+    display: inline-block;
+    font-weight: bold;
+    font-size: $subfontsize-1;
+  }
+  .bestallare{
+    font-size: $subfontsize-1;
+    display: inline-block;
+    margin-bottom: $column-gutter/2;
+    
+  }
+  ul.links{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    li{
+      list-style: none;
+      line-height: 1.2rem;
+      a{
+        font-size: $subfontsize-1;
+        
+      } 
+    }
+    
+  }
+}
+
+// ==
+
 .view-date{
 	font-size: 0.8rem;
 	color: $oil;
@@ -513,6 +621,7 @@ ul.ep-lista, ul.views-summary{
 .view-adminpersonal{
 	img{
 		width: 100%;
+    padding: 5px;
 	}
 	.views-row{
 		width: 100%;
@@ -744,8 +853,8 @@ $tmp-font-size-1: 12px;
 //		font-size: $tmp-font-size-1;
 	}
   img{
-    width: 50% !important;
-    height: auto !important;
+//    width: 50% !important;
+//    height: auto !important;
   }
 	.columns{
 		padding: $column-gutter/2;
@@ -886,6 +995,13 @@ a{
 
 .sidebar-first.columns{
   padding-left: $column-gutter !important;
+  ul{
+    li{
+      a{
+        font-size: 0.85rem;
+      }
+    }
+  }
 }
 
 // ======= Spacialknappar =======
