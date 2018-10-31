@@ -116,7 +116,7 @@ $jumbo       : #888888;
 // $monsoon     : #777777;
  $steel       : #666666;
  $charcoal    : #555555;
-// $tuatara     : #444444;
+$tuatara     : #444444;
  $oil         : #333333;
  $jet         : #222222;
 $black       : #000000;
@@ -244,7 +244,7 @@ $large-only: "#{$screen} and (min-width:#{lower-bound($large-range)}) and (max-w
  $paragraph-font-family: inherit;
  $paragraph-font-weight: $font-weight-normal;
  $paragraph-font-size: 0.95rem;
- $paragraph-line-height: 1.7;
+ $paragraph-line-height: 1.5;
  $paragraph-margin-bottom: rem-calc(20);
 // $paragraph-aside-font-size: rem-calc(14);
 // $paragraph-aside-line-height: 1.35;
