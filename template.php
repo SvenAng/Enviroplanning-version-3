@@ -195,8 +195,8 @@ function enviroplanningv3_preprocess_page(&$variables) {
     $variables['sidebar_sec_grid'] = 'medium-3';
   }
   elseif (!empty($left) && empty($right)) {
-    $variables['main_grid'] = 'medium-8 medium-push-4';
-    $variables['sidebar_first_grid'] = 'medium-4 medium-pull-8';
+    $variables['main_grid'] = 'medium-9 medium-push-3';
+    $variables['sidebar_first_grid'] = 'medium-3 medium-pull-9';
     $variables['sidebar_sec_grid'] = '';
   }
   else {
