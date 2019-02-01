@@ -647,15 +647,22 @@ ul.ep-lista, ul.views-summary{
 	}
   
 }
+.view-frontpage{
+    h1{
+        margin: 0;
+        font-size: 1rem;
+    }
+}
 //Flexslider on front ===================
 .frontpage-gallery{
   text-shadow: 2px 2px 2px $oil; 
   .gallery-bottom{
     position: relative;
     .gallery-top{
-    	h1{
+    	h1,h2,h3,h4{
     		color: $white;
-        margin: 0 0 0.2rem 0;
+            margin: 0 0 0.2rem 0;
+            font-size: 2rem;
     	}
       position: absolute;
       bottom: 1rem;
@@ -691,6 +698,9 @@ ul.ep-lista, ul.views-summary{
           color: $white;
           margin: 0;
         }
+          h3{
+              font-size: 1.4rem;
+          }
         p{
           margin: 0;
         }
