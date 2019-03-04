@@ -115,7 +115,7 @@ function enviroplanningv3_preprocess_page(&$variables) {
       ),
       'heading' => array(
         'text' => t('Main menu'),
-        'level' => 'h2',
+        'level' => 'div',
         'class' => array('element-invisible'),
       ),
     ));
