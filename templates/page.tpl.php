@@ -105,19 +105,23 @@
     <!--/.l-help -->
   <?php endif; ?>
 
-  <!--.l-main -->
+  <!--.main -->
   <main role="main" class="row l-main">
   	<?php if (!empty($page['content_above'])): ?>
+      <!-- content above -->
 	  	<div class="small-12 columns content-above">
 	  		<?php print render($page['content_above']); ?>
 	  	</div>
+      <!-- end content above -->
   	<?php endif; ?>
-    <!-- .l-main region -->
+    
     <div class="<?php print $main_grid; ?> main columns">
       <?php if (!empty($page['highlighted'])): ?>
+        <!-- hightlighted -->
         <div class="highlight panel callout">
           <?php print render($page['highlighted']); ?>
         </div>
+        <!-- highlighted end -->
       <?php endif; ?>
 
       <!-- <a id="main-content"></a> -->
@@ -144,21 +148,25 @@
 
       <?php print render($page['content']); ?>
     </div>
-    <!--/.l-main region -->
+    
 
     <?php if (!empty($page['sidebar_first'])): ?>
+      <!-- sidbar first -->
       <aside role="complementary" class="<?php print $sidebar_first_grid; ?> sidebar-first columns sidebar">
         <?php print render($page['sidebar_first']); ?>
       </aside>
+      <!-- sidebar first end -->
     <?php endif; ?>
 
     <?php if (!empty($page['sidebar_second'])): ?>
+      <!-- sidebar right -->
       <aside role="complementary" class="<?php print $sidebar_sec_grid; ?> sidebar-second columns sidebar">
         <?php print render($page['sidebar_second']); ?>
       </aside>
+      <!-- sidebar right end -->
     <?php endif; ?>
   </main>
-  <!--/.l-main -->
+  <!--/.l-main end -->
 
   <?php if (!empty($page['triptych_first']) || !empty($page['triptych_middle']) || !empty($page['triptych_last'])): ?>
     <!--.triptych-->
